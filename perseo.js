@@ -1,3 +1,6 @@
+//Cuando se recarge la pagina el boton #btn-return-home se le agregara la clase hidden
+var btn_return_home=$("#btn-return-home").addClass('d-none');
+
 //Esta funcion es para poner y eliminar la clase active del side bar, mostrar y ocultar.
  $(document).on('click', '#btn-sidebar', function(event) {
  	$("#sidebar").toggleClass('active');
@@ -30,11 +33,17 @@
 
          $("#btn-sidebar").removeClass('btn-sidebar-abajo');
 
+         $("#btn-return-home").addClass('d-none');
+
+         
+
     } else {
          // console.log("abajo");
          $("#btn-sidebar i:nth-child(1)").addClass('d-none');
          $("#btn-sidebar i:nth-child(2)").removeClass('d-none');
 
          $("#btn-sidebar").addClass('btn-sidebar-abajo');
+
+         $("#btn-return-home").removeClass('d-none');
     }
 });
