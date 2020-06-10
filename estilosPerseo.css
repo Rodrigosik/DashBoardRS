@@ -1,0 +1,137 @@
+/*Se le quita el margen al body*/
+*{
+	margin: 0;
+	padding: 0;
+}
+/*Diseño del sidebar*/
+#sidebar{
+	position: fixed;
+	width: 250px;
+	height: 100%;
+	
+	background: #5C258D;
+	background: -webkit-linear-gradient(to top, #4389A2, #5C258D);
+	background: linear-gradient(to top, #4389A2, #5C258D); 
+
+	left: -250px;
+  	transition: all 300ms linear;
+  	z-index: 20;
+}
+/*Escroll del sider bar*/
+.scrollsidebar{
+	width: 100%;
+	 height: 100%;
+	 overflow-y: auto;
+}
+/*Tamaño del Scroll*/
+.scrollsidebar::-webkit-scrollbar{
+	width: 4px;
+	/*display: none;*/
+}
+/*Color y borde del scroll*/
+.scrollsidebar::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+.scrollsidebar::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+.scrollsidebar::-webkit-scrollbar-thumb:active {
+    background-color: #999999;
+}
+/*Si el sidebar esta activo se mostrara*/
+#sidebar.active{
+	left: 0px;
+}
+/*Tamaño de los botones de la lista del sidebar*/
+#sidebar ul li{
+	width: 90%;
+}
+/*Diseño del logo del sidebar*/
+.logo-perseo{
+	border-radius: 50%;
+	height: 50px;
+	width: 50px;
+	margin-left: 30px;
+}
+/*Diseño del boton del sidebar*/
+#sidebar .toggle-btn{
+	position: absolute;
+	left: 280px;
+	top: 20px;
+	cursor: pointer;
+}
+.btn-sidebar-abajo{
+	position: absolute;
+	background-color: rgba(92,40,142,0.5)!important;
+	left: -30px;
+}
+.btn-sidebar-abajo:hover{
+	background-color: rgba(92,40,142,1)!important;
+}
+/*Tamaño del icono de la lista del sidebar*/
+.icon-sise{
+	font-size: 20px;
+}
+/*boton color purpura*/
+.btn-purple{
+	background-color:#5C288E;
+	color:#ffffff;
+}
+.btn-purple:hover{
+	background-color:#6C429A;
+	color:#ffffff;
+}
+/*Boton sin color*/
+.btn-sincolor{
+	background-color: rgba(255,255,255,0);
+	color:#ffffff;
+}
+.btn-sincolor:hover{
+	background-color: rgba(255,255,255,0.2);
+	color:#ffffff;
+}
+/*Animacion paa rotar el icono del sider bar*/
+.rotar-90{
+	transition: 0.5s;
+	transform: rotate(-90deg);
+}
+.rotar90{
+	transition: 0.5s;
+	transform: rotate(0deg);
+}
+/*Cuerpo de la pagina web*/
+#cuerpo-perseo{
+	position: relative;
+	left: 0;
+	animation-name: izquierda-animation;
+	animation-duration: 450ms;
+	z-index: 10;
+}
+#cuerpo-perseo.active{
+	/*position: absolute;*/
+	animation-name: derecha-animation;
+	animation-duration: 520ms;
+	width: 81.5%;
+	left: 250px;
+}
+/*Color del texto del logo del sidebar*/
+.logo-perseo-texto{
+	color: white;
+	font-weight: 500;
+	margin-left: 5px;
+}
+.boton-subida{
+	display:
+	position: fixed;
+}
+/*animacion para el desplazamiento del contenido*/
+@keyframes derecha-animation {
+  from {left: 0;width: 100%}
+  to {left: 250px;width: 81.5%}
+}
+@keyframes izquierda-animation {
+  from {left: 250px;width: 81.5%}
+  to {left: 0px;width: 100%}
+}
