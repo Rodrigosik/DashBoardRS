@@ -1,5 +1,5 @@
 <!-- Modal crear grupo de secciones -->
-<div class="modal fade" id="modalCrearGrupoSecciones" tabindex="-1" role="dialog" aria-labelledby="modalCrearGrupoSecciones" aria-hidden="true">
+<div class="modal fade" id="hola" tabindex="-1" role="dialog" aria-labelledby="modalCrearGrupoSecciones" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
 
